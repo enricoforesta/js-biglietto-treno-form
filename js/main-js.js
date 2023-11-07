@@ -4,9 +4,7 @@
 1. Chiedere all'utente i km da percorre, salvarlo in una variabile e trasformarlo in numero.
 */
 
-const elementKm = Number(
-    document.getElementsByClassName("xx-kilometri")
-);
+const elementKm = Number(document.querySelector(".xx-kilometri"));
 
 console.log("I kilometri sono:", elementKm, "km");
 
@@ -14,9 +12,7 @@ console.log("I kilometri sono:", elementKm, "km");
 2. Chiedere all'utente l'età, salvarlo in una variabile e trasformarlo in numero.
 */
 
-const elementEta = parseInt(
-    document.getElementsByClassName("xx-eta")
-);
+const elementEta = parseInt(document.querySelector(".xx-eta"));
 
 console.log("Età: ", elementEta);
 
@@ -32,7 +28,7 @@ const elementScontoOver65 = 40;
 
 //bottone
 
-const elementInput = document.getElementsByClassName("xx-button");
+const elementInput = document.querySelector(".xx-button");
 
 console.log(elementInput);
 
@@ -50,41 +46,34 @@ console.log(elementInput);
 elementInput.addEventListener(
     'click',
     function () {
-        
+        if (!isNaN(elementKm) && !isNaN(elementEta)) {
+
+            let elementSomma = (elementKm * elementPrezzo);
+
+            if (elementEta < 18) {
+
+                elementSomma -= ((elementSomma / 100) * elementScontoMinorenne);
+
+            }
+
+            else if (elementEta > 64) {
+
+                elementSomma -= ((elementSomma / 100) * elementScontoOver65);
+
+            }
+
+            console.log("Prezzo Finale", elementSomma.toFixed(2), "€");
+
+        }
+
+        else {
+
+            console.log("errore");
+
+        }
+
     }
 );
-
-
-// if (!isNaN(elementKm) && !isNaN(elementEta)) {
-
-//     let elementSomma = (elementKm * elementPrezzo);
-
-
-//     if (elementEta < 18) {
-
-//         elementSomma -= ((elementSomma / 100) * elementScontoMinorenne);
-
-//     }
-
-//     else if (elementEta > 64) {
-
-//         elementSomma -= ((elementSomma / 100) * elementScontoOver65);
-
-//     }
-
-
-//     console.log("Prezzo Finale", elementSomma.toFixed(2), "€");
-
-
-// }
-
-// else {
-//     console.log("errore");
-// }
-
-
-
-
 
 
 
