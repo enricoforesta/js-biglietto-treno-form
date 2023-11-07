@@ -26,11 +26,20 @@ const elementScontoMinorenne = 20;
 
 const elementScontoOver65 = 40;
 
-//bottone
+//bottoni
 
 const elementInput = document.querySelector(".xx-button");
 
 console.log(elementInput);
+
+const elementReset = document.querySelector(".xx-reset");
+
+console.log(elementReset);
+
+
+//mostra biglietto
+const elementMostra = document.querySelector(".xx-mostra");
+
 
 
 
@@ -55,6 +64,10 @@ elementInput.addEventListener(
     function () {
         if (!isNaN(elementKm.value) && !isNaN(elementEta.value)) {
 
+            //mostra biglietto
+            elementMostra.classList.add("d-block");
+            elementMostra.classList.remove("d-none");
+
             let elementSomma = (elementKm.value * elementPrezzo);
 
             // nome e cognome
@@ -72,6 +85,17 @@ elementInput.addEventListener(
 
             elementBigliettoOut.innerHTML = "Biglietto Standard";
 
+            //numrero
+
+            const elementNumero = document.querySelector(".xx-numero-random");
+
+            elementNumero.innerHTML = Math.floor(Math.random() * 20 + 1);
+
+            //codice
+
+            const elementCodice = document.querySelector(".xx-codice");
+
+            elementCodice.innerHTML = "999" + Math.floor(Math.random() * 20 + 1);
 
             //condizione
 
@@ -79,17 +103,30 @@ elementInput.addEventListener(
 
                 elementSomma -= ((elementSomma / 100) * elementScontoMinorenne);
 
-               // biglietto
+                // biglietto
                 elementBigliettoOut.innerHTML = "Biglietto Junior";
+
+                //codice
+                elementCodice.innerHTML = "777" + Math.floor(Math.random() * 20 + 1);
+
             }
 
             else if (elementEta.value > 64) {
 
                 elementSomma -= ((elementSomma / 100) * elementScontoOver65);
 
-               // biglietto
+                // biglietto
                 elementBigliettoOut.innerHTML = "Biglietto Senior";
+
+                //codice
+                elementCodice.innerHTML = "888" + Math.floor(Math.random() * 20 + 1);
+
             }
+            //prezzo
+
+            const elementPrezzoOut = document.querySelector(".xx-prezzo");
+
+            elementPrezzoOut.innerHTML = elementSomma.toFixed(2) + "€";
 
             console.log("Prezzo Finale", elementSomma.toFixed(2), "€");
 
@@ -105,9 +142,16 @@ elementInput.addEventListener(
         }
 
     }
+
 );
 
+elementReset.addEventListener(
+    'click',
+    function () {
+        //mostra biglietto
 
+        elementMostra.classList.remove("d-block");
+        elementMostra.classList.add("d-none");
+    }
 
-
-console.log("FINE")
+)

@@ -38,14 +38,14 @@
             </div>
             <div class="col-12 mt-5">
                 <input type="button" class="xx-button m-2" value="Genera">
-                <input type="button" class="xx-button m-2" value="Annulla">
+                <input type="reset" class="xx-reset m-2" value="Annulla">
             </div>
         </form>
     </section>
     <!-- /calcola il  tuo biglietto -->
 
     <!-- il biglietto -->
-    <section>
+    <section class="xx-mostra d-none">
         <h2 class="text-uppercase">il tuo biglietto</h2>
         <div class="row w-75 m-auto text-start">
             <h3 class="text-uppercase">dettaglio passeggeri</h3>
@@ -59,16 +59,16 @@
                         <tr>
                             <th scope="col">Offerta</th>
                             <th scope="col">Carrozza</th>
-                            <th scope="col">Codice</th>
-                            <th scope="col">Costo</th>
+                            <th scope="col">Codice CP</th>
+                            <th scope="col">Costo Biglietto</th>
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
                         <tr>
                             <td class="pt-5 xx-biglietto-out" scope="row"></th>
-                            <td class="pt-5">5</td>
-                            <td class="pt-5">88888</td>
-                            <td class="pt-5">prezzo</td>
+                            <td class="pt-5 xx-numero-random"></td>
+                            <td class="pt-5 xx-codice">88888</td>
+                            <td class="pt-5 xx-prezzo">prezzo</td>
                         </tr>
 
                     </tbody>
