@@ -5,7 +5,7 @@
 */
 
 const elementKm = Number(
-    prompt("inserire i km da percorrere")
+    document.getElementsByClassName("xx-kilometri")
 );
 
 console.log("I kilometri sono:", elementKm, "km");
@@ -15,20 +15,26 @@ console.log("I kilometri sono:", elementKm, "km");
 */
 
 const elementEta = parseInt(
-    prompt("inserire la tua età")
+    document.getElementsByClassName("xx-eta")
 );
 
 console.log("Età: ", elementEta);
 
 
 //prezzo km
-const elementPrezzo = 0.21
+const elementPrezzo = 0.21;
 
 //sconti
 
 const elementScontoMinorenne = 20;
 
 const elementScontoOver65 = 40;
+
+//bottone
+
+const elementInput = document.getElementsByClassName("xx-button");
+
+console.log(elementInput);
 
 /* 3. Calcolare il prezzo, kilometri inseriti * 0,21€.
     I prezzi finali dovranno essere con massimo due decimali, ES. 10,99€
@@ -41,34 +47,40 @@ const elementScontoOver65 = 40;
 
 
 // calcolo prezzo
-
-if (!isNaN(elementKm) && !isNaN(elementEta)) {
-
-    let elementSomma = (elementKm * elementPrezzo);
-
-
-    if (elementEta < 18) {
-
-        elementSomma -= ((elementSomma / 100) * elementScontoMinorenne);
-
+elementInput.addEventListener(
+    'click',
+    function () {
+        
     }
-
-    else if (elementEta > 64) {
-
-        elementSomma -= ((elementSomma / 100) * elementScontoOver65);
-
-    }
+);
 
 
-    console.log("Prezzo Finale", elementSomma.toFixed(2), "€");
+// if (!isNaN(elementKm) && !isNaN(elementEta)) {
+
+//     let elementSomma = (elementKm * elementPrezzo);
 
 
-}
+//     if (elementEta < 18) {
 
-else {
-    console.log("errore")
-}
+//         elementSomma -= ((elementSomma / 100) * elementScontoMinorenne);
 
+//     }
+
+//     else if (elementEta > 64) {
+
+//         elementSomma -= ((elementSomma / 100) * elementScontoOver65);
+
+//     }
+
+
+//     console.log("Prezzo Finale", elementSomma.toFixed(2), "€");
+
+
+// }
+
+// else {
+//     console.log("errore");
+// }
 
 
 
