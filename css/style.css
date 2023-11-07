@@ -1,7 +1,20 @@
 body{
-    background-color: rebeccapurple
+    background-color: rebeccapurple;
+    font-family: 'Kanit', sans-serif;
 }
 
 form{
     color: red;
+}
+
+.xx-button:hover{
+    background-color: yellow;
+    color: orangered;
+    border-color: orangered;
+}
+
+.xx-reset:hover{
+    background-color: yellow;
+    color: blue;
+    border-color: blue;
 }
