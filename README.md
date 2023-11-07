@@ -40,6 +40,12 @@ Solo una volta che il milestone 1 sarà completo e funzionante allora realizzere
 
         -- cambiamo i prompt con degli input e aggiugniamo un bottone nell html.
         -- colleghiamo gli input e il bottone  alle variabili. 
+
+5. MILESTONE 2
+
+        --inseriamo gli input per il nome, cambiamo l input dell età, aggiungiamo un altro bottone di Annulla.
+        --costruiamo la stuttura html.
+        --Creiamo il biglietto che verra visualizzato solo dopo aver premuto il pulsante. 
         
 
 
