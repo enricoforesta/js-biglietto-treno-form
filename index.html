@@ -4,17 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- /boostrap -->
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- my css -->
+
     <title>Calcolo del prezzo del biglietto del treno</title>
 </head>
 
-<body>
-    <form>
-        <input type="number" class="xx-kilometri">
-        <input type="number" class="xx-eta">
-        <input type="button" class="xx-button" value="testo1">
+<body class="container-fluid text-center">
+    <!-- calcola il  tuo biglietto -->
+    <h1 class="text-uppercase">calcola il prezzo del tuo biglietto</h1>
+    <form class="row w-75 m-auto">
+        <div class="col-4">
+            <label for="name">Nome e Cognome</label><br>
+            <input type="text" name="name">
+        </div>
+        <div class="col-4">
+            <label for="kilometri">Km da percorrere ES.(100.50)</label><br>
+            <input type="number" name="kilometri" class="xx-kilometri">
+        </div>
+        <div class="col-4">
+            <label for="eta">Fascia D'Età</label><br>
+            <select name="eta" class="xx-eta">
+                <option value="22">Maggiorenne</option>
+                <option value="17">Minorenne</option>
+                <option value="65">Adulto</option>
+            </select>
+        </div>
+        <div class="col-12 mt-5">
+            <input type="button" class="xx-button m-2" value="Genera">
+            <input type="button" class="xx-button m-2" value="Annulla">
+        </div>
     </form>
+    <!-- /calcola il  tuo biglietto -->
 
+    <!-- il biglietto -->
+
+    <h2 class="text-uppercase">il tuo biglietto</h2>
+    <div class="row w-75 m-auto text-start">
+        <h3 class="text-uppercase">dettaglio passeggeri</h3>
+        <div class="col-4 p-4">
+            <h4 class="text-uppercase">nome passeggero</h4>
+            <p class="xx-name">nome</p>
+        </div>
+        <div class="col-8 p-4">
+            <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">Offerta</th>
+                    <th scope="col">Carrozza</th>
+                    <th scope="col">Codice</th>
+                    <th scope="col">Costo</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr>
+                    <td class="pt-5" scope="row">Biglietto</th>
+                    <td class="pt-5">5</td>
+                    <td class="pt-5">88888</td>
+                    <td class="pt-5">prezzo</td>
+                  </tr>
+          
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <!-- il biglietto -->
+
+
+    <!-- Js boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Js boostrap -->
+    <!-- my JS -->
     <script src="js/main-js.js"></script>
+    <!-- /my JS -->
+
 </body>
 
 </html>
