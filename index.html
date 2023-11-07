@@ -17,62 +17,65 @@
 
 <body class="container-fluid text-center">
     <!-- calcola il  tuo biglietto -->
-    <h1 class="text-uppercase">calcola il prezzo del tuo biglietto</h1>
-    <form class="row w-75 m-auto">
-        <div class="col-4">
-            <label for="name">Nome e Cognome</label><br>
-            <input type="text" name="name">
-        </div>
-        <div class="col-4">
-            <label for="kilometri">Km da percorrere ES.(100.50)</label><br>
-            <input type="number" name="kilometri" class="xx-kilometri">
-        </div>
-        <div class="col-4">
-            <label for="eta">Fascia D'Età</label><br>
-            <select name="eta" class="xx-eta">
-                <option value="22">Maggiorenne</option>
-                <option value="17">Minorenne</option>
-                <option value="65">Adulto</option>
-            </select>
-        </div>
-        <div class="col-12 mt-5">
-            <input type="button" class="xx-button m-2" value="Genera">
-            <input type="button" class="xx-button m-2" value="Annulla">
-        </div>
-    </form>
+    <section>
+        <h1 class="text-uppercase">calcola il prezzo del tuo biglietto</h1>
+        <form class="row w-75 m-auto">
+            <div class="col-4">
+                <label for="name">Nome e Cognome</label><br>
+                <input type="text" name="name" class="xx-name">
+            </div>
+            <div class="col-4">
+                <label for="kilometri">Km da percorrere ES.(100.50)</label><br>
+                <input type="number" name="kilometri" class="xx-kilometri">
+            </div>
+            <div class="col-4">
+                <label for="eta">Fascia D'Età</label><br>
+                <select name="eta" class="xx-eta">
+                    <option value="22">Maggiorenne</option>
+                    <option value="17">Minorenne</option>
+                    <option value="65">Adulto</option>
+                </select>
+            </div>
+            <div class="col-12 mt-5">
+                <input type="button" class="xx-button m-2" value="Genera">
+                <input type="button" class="xx-button m-2" value="Annulla">
+            </div>
+        </form>
+    </section>
     <!-- /calcola il  tuo biglietto -->
 
     <!-- il biglietto -->
+    <section>
+        <h2 class="text-uppercase">il tuo biglietto</h2>
+        <div class="row w-75 m-auto text-start">
+            <h3 class="text-uppercase">dettaglio passeggeri</h3>
+            <div class="col-4 p-4">
+                <h4 class="text-uppercase">nome passeggero</h4>
+                <p class="xx-name-out">nome</p>
+            </div>
+            <div class="col-8 p-4">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">Offerta</th>
+                            <th scope="col">Carrozza</th>
+                            <th scope="col">Codice</th>
+                            <th scope="col">Costo</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                            <td class="pt-5 xx-biglietto-out" scope="row"></th>
+                            <td class="pt-5">5</td>
+                            <td class="pt-5">88888</td>
+                            <td class="pt-5">prezzo</td>
+                        </tr>
 
-    <h2 class="text-uppercase">il tuo biglietto</h2>
-    <div class="row w-75 m-auto text-start">
-        <h3 class="text-uppercase">dettaglio passeggeri</h3>
-        <div class="col-4 p-4">
-            <h4 class="text-uppercase">nome passeggero</h4>
-            <p class="xx-name">nome</p>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="col-8 p-4">
-            <table class="table table-borderless">
-                <thead>
-                  <tr>
-                    <th scope="col">Offerta</th>
-                    <th scope="col">Carrozza</th>
-                    <th scope="col">Codice</th>
-                    <th scope="col">Costo</th>
-                  </tr>
-                </thead>
-                <tbody class="table-group-divider">
-                  <tr>
-                    <td class="pt-5" scope="row">Biglietto</th>
-                    <td class="pt-5">5</td>
-                    <td class="pt-5">88888</td>
-                    <td class="pt-5">prezzo</td>
-                  </tr>
-          
-                </tbody>
-              </table>
-        </div>
-    </div>
+    </section>
 
     <!-- il biglietto -->
 
