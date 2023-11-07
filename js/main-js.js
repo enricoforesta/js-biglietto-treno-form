@@ -4,7 +4,7 @@
 1. Chiedere all'utente i km da percorre, salvarlo in una variabile e trasformarlo in numero.
 */
 
-const elementKm = Number(document.querySelector(".xx-kilometri"));
+const elementKm = document.querySelector(".xx-kilometri");
 
 console.log("I kilometri sono:", elementKm, "km");
 
@@ -12,7 +12,7 @@ console.log("I kilometri sono:", elementKm, "km");
 2. Chiedere all'utente l'età, salvarlo in una variabile e trasformarlo in numero.
 */
 
-const elementEta = parseInt(document.querySelector(".xx-eta"));
+const elementEta = document.querySelector(".xx-eta");
 
 console.log("Età: ", elementEta);
 
@@ -46,17 +46,17 @@ console.log(elementInput);
 elementInput.addEventListener(
     'click',
     function () {
-        if (!isNaN(elementKm) && !isNaN(elementEta)) {
+        if (!isNaN(elementKm.value) && !isNaN(elementEta.value)) {
 
-            let elementSomma = (elementKm * elementPrezzo);
+            let elementSomma = (elementKm.value * elementPrezzo);
 
-            if (elementEta < 18) {
+            if (elementEta.value < 18) {
 
                 elementSomma -= ((elementSomma / 100) * elementScontoMinorenne);
 
             }
 
-            else if (elementEta > 64) {
+            else if (elementEta.value > 64) {
 
                 elementSomma -= ((elementSomma / 100) * elementScontoOver65);
 
