@@ -6,15 +6,11 @@
 
 const elementKm = document.querySelector(".xx-kilometri");
 
-console.log("I kilometri sono:", elementKm, "km");
-
 /*
 2. Chiedere all'utente l'età, salvarlo in una variabile e trasformarlo in numero.
 */
 
 const elementEta = document.querySelector(".xx-eta");
-
-console.log("Età: ", elementEta);
 
 
 //prezzo km
@@ -30,22 +26,10 @@ const elementScontoOver65 = 40;
 
 const elementInput = document.querySelector(".xx-button");
 
-console.log(elementInput);
-
 const elementReset = document.querySelector(".xx-reset");
-
-console.log(elementReset);
-
 
 //mostra biglietto
 const elementMostra = document.querySelector(".xx-mostra");
-
-
-
-
-
-
-
 
 
 /* 3. Calcolare il prezzo, kilometri inseriti * 0,21€.
@@ -57,7 +41,6 @@ const elementMostra = document.querySelector(".xx-mostra");
 
     */
 
-
 // calcolo prezzo
 elementInput.addEventListener(
     'click',
@@ -65,10 +48,9 @@ elementInput.addEventListener(
         if (!isNaN(elementKm.value) && !isNaN(elementEta.value)) {
 
             //mostra biglietto
-            elementMostra.classList.add("d-block");
             elementMostra.classList.remove("d-none");
 
-            let elementSomma = (elementKm.value * elementPrezzo);
+            let elementSomma = Number(elementKm.value) * elementPrezzo;
 
             // nome e cognome
             const elementName = document.querySelector(".xx-name");
@@ -130,9 +112,6 @@ elementInput.addEventListener(
 
             console.log("Prezzo Finale", elementSomma.toFixed(2), "€");
 
-
-
-
         }
 
         else {
@@ -150,7 +129,6 @@ elementReset.addEventListener(
     function () {
         //mostra biglietto
 
-        elementMostra.classList.remove("d-block");
         elementMostra.classList.add("d-none");
     }
 
